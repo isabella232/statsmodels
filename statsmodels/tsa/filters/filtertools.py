@@ -25,7 +25,7 @@ def _pad_nans(x, head=None, tail=None):
         if head is None and tail is None:
             return x
         elif head and tail:
-            return np.r_[[np.nan] * head, x, [np.nan] * tail]
+            return np.r_[[np.nan] * int(head), x, [np.nan] * int(tail)]
         elif tail is None:
             return np.r_[[np.nan] * head, x]
         elif head is None:
